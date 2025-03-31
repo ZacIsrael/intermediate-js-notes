@@ -204,3 +204,30 @@ function isLeap(year) {
     
     /******Don't change the code below*******/    
     }
+
+
+  function fibonacciGenerator(n){
+    // array that stores the fibonacci numbers
+    let result = [];
+    // variable used to do the arithmetic
+    let count = 0;
+
+    for (let i = 0; i < n; i++){
+      // first 2 values are always 0 & 1
+      if(i === 0){
+        result.push(0);
+        continue;
+      }
+      if(i === 1){
+        result.push(1);
+        continue;
+      }
+      // no need to do any null check here because if we reach this point,
+      // that means that there are at least two elements in the array
+      count = result[i - 1] + result[i - 2];
+      result.push(count);
+    }
+
+    return result;
+
+  }
