@@ -160,4 +160,25 @@ function isLeap(year) {
     }
   }
 
+
   fizzBuzz(0, 30);
+
+  // ChatGPT's version of FizzBuzz
+  function fizzBuzzChatGPT(start, end) {
+    for (let i = start; i <= end; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');  // Divisible by both 3 and 5
+      } else if (i % 3 === 0) {
+        console.log('Fizz');  // Divisible by 3
+      } else if (i % 5 === 0) {
+        console.log('Buzz');  // Divisible by 5
+      } else {
+        console.log(i);  // Not divisible by either 3 or 5
+      }
+    }
+  }
+  
+  // Call the function with the default FizzBuzz range
+  fizzBuzzChatGPT(1, 100);
+  
+
