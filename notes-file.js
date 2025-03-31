@@ -102,5 +102,62 @@ function isLeap(year) {
   }
   return message;
   /**************Don't change the code below****************/    
-  
+
   }
+
+  // 📚 What is an Array in JavaScript?
+  // In JavaScript, an array is a special type of object used to store multiple 
+  // values in a single variable. Arrays are ordered collections of items, 
+  // where each item (element) is identified by an index starting from 0.
+
+  // Unlike in Java, Arrays in Javascript can store values of different types (numbers, strings, objects, other arrays, etc.).
+  // JavaScript provides many built-in methods to manipulate arrays.
+
+  // Declaring arrays 
+  let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+  let numbers = new Array(5, 10, 15, 20);
+
+  let emptyArray = [];
+  emptyArray[0] = "First Element";
+  emptyArray[1] = 42;
+
+  // Multi-dimensional array
+  let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+
+  // the value at row 1, column 2
+  console.log(matrix[1][2]);  // Output: 6
+
+  // Write a program that prints the numbers from 1 to 100. However, for multiples of 3, 
+  // print "Fizz" instead of the number, and for multiples of 5, print "Buzz". 
+  // For numbers that are multiples of both 3 and 5, print "FizzBuzz".
+  function fizzBuzz (start, end){
+    let i = start;
+    while (i <= end){
+      if(start === 0) {
+        i++;
+        continue;
+      }
+      if ((i % 3 !== 0) && (i % 5 !== 0)){
+        // i is not evenly divisible by 3 or 5
+        console.log(i);
+      } else if((i % 3 === 0) && (i % 5 !== 0)){
+        // i is evenly divisible by 3 but not 5
+        console.log('Fizz');
+      } else if ((i % 3 !== 0) && (i % 5 === 0)){
+        // i is evenly divisible by 5 but not 3
+        console.log('Buzz');
+      } else if ((i % 3 === 0) && (i % 5 === 0)){
+        // i is evenly divisible by 5 but & 3
+        console.log('FizzBuzz');
+      }
+      // increment i
+      i++;
+    }
+  }
+
+  fizzBuzz(0, 30);
