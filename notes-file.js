@@ -1,6 +1,7 @@
 // Intermediate Javascript
 
 // Import the readline module
+const { error } = require("console");
 const readline = require("readline");
 
 // Random Number Generation
@@ -70,3 +71,36 @@ rl.question("Enter two names, separate them with a ',': ", (names) => {
     
     return interpretation;
 }
+
+// A year is a leap year if it is evenly divisible by 4 ; 
+// except if that year is also evenly divisible by 100; 
+// unless that year is also evenly divisible by 400.
+
+// return 'Leap year.' if the year is a leap year and 'Not leap year.' if it is not
+function isLeap(year) {
+    
+  /**************Don't change the code above****************/  
+  // check if the year paramater is a Number
+  if(typeof(year) !== 'number'){
+    throw error('Please enter a valid year');
+  }
+  //Write your code here.   
+  let message = ''; 
+  // A year is a leap year if it is evenly divisible by 4 
+  if(year % 4 === 0){
+    // year is evenly divisible by 4
+    if ((year % 100 === 0) && (year % 400 !== 0)){
+      // year is evenly divisible 100 but NOT evenly divisible by 400
+      message = 'Not leap year.';
+    }
+    // year is evenly divisble by 4 or 400 but NOT 100
+    message = 'Leap year.';
+    
+  } else {
+    // year is not evenly divisible by 4
+    message = 'Not leap year.';
+  }
+  return message;
+  /**************Don't change the code below****************/    
+  
+  }
