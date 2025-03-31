@@ -49,3 +49,24 @@ rl.question("Enter two names, separate them with a ',': ", (names) => {
     // close interface after recieving the input from the command line.
     rl.close();
   });
+
+  function bmiCalculator (weight, height) {
+    
+    let interpretation = '';
+    
+    // Calculate bmi 
+    let bmi = weight / (height * height);
+    console.log ('bmi = ', bmi);
+    
+    // set message based on bmi
+    if (bmi < 18.5){
+        interpretation = `Your BMI is ${bmi}, so you are underweight.`;
+        
+    } else if ((bmi >= 18.5) && (bmi <= 24.9)){
+        interpretation = `Your BMI is ${bmi}, so you have a normal weight.`;
+    } else {
+        interpretation = `Your BMI is ${bmi}, so you are overweight.`;
+    }
+    
+    return interpretation;
+}
