@@ -182,3 +182,25 @@ function isLeap(year) {
   fizzBuzzChatGPT(1, 100);
   
 
+  // Who's Buying Lunch? Code Challenge: 
+  // This function will select a random name from a list of names. 
+  // The person selected will have to pay for everybody's food bill. 
+  // Important: The output should e returned from the function and 
+  // you do not need alert, prompt or console.log. 
+  function whosPaying(names) {
+    
+    /******Don't change the code above*******/
+    // generate a random index in the array
+    // generates a random number between 0 & 0.99999999999
+    let i = Math.random();
+
+    // multiplies i by the length of the array (i will never be greater than the length of the array)
+    i = i * names.length;
+
+    // round n down to the nearest whole number 
+    i = Math.floor(i);  
+
+    return `${names[i]} is going to buy lunch today!`;
+    
+    /******Don't change the code below*******/    
+    }
